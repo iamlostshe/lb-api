@@ -10,3 +10,16 @@ dependencies = [
 
 [tool.ruff.lint]
 select = ["ALL"]
+ignore = [
+    # Ошибки связанные с кирилицей
+    "RUF001", "RUF002", "RUF003",
+
+    # TODO
+    "TD003", "FIX002",
+
+    # Cравнение магических значений
+    "PLR2004",
+
+    # Random
+    "S311",
+]
