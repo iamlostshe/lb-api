@@ -1,4 +1,10 @@
-class ClassNotSupported(Exception):
+"""Исключения, оторые могут возникунть при генерации задач."""
+
+
+class ClassNotSupportedError(Exception):
+    """Заданный учебный класс не поддерживается поставщиком."""
+
     def __init__(self) -> None:
+        """Инициализация клааса ошибки."""
         self.message = "Заданный учебный класс не поддерживается поставщиком."
         super().__init__(self.message)
