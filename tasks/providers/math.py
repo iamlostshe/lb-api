@@ -20,7 +20,7 @@ def _plus_or_minus(min_: int, max_: int) -> tuple[str, str]:
     return Task(
         text=f"Решите пример:\n\n{expression} =",
         answer=answer,
-        answer_options=answer_options,
+        answer_options=tuple(set(answer_options)),
     )
 
 
@@ -37,7 +37,7 @@ def _multiply(min_: int, max_: int) -> tuple[str, str]:
     return Task(
         text=f"Решите пример:\n\n{expression} =",
         answer=answer,
-        answer_options=answer_options,
+        answer_options=tuple(set(answer_options)),
     )
 
 

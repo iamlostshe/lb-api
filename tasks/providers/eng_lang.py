@@ -44,7 +44,7 @@ def task() -> tuple[str]:
     return Task(
         text=text,
         answer=answer,
-        answer_options=answer_options,
+        answer_options=tuple(set(answer_options)),
     )
 
     raise ClassNotSupportedError
